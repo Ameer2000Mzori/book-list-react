@@ -1,7 +1,8 @@
 import React from 'react'
+import Home from './components/pages/Home'
 
 function App() {
-  return <h1 className="text-black text-[2rem]">Hello World</h1>
+  return <Home />
 }
 
 export default App
