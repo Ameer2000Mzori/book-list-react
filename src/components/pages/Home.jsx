@@ -1,4 +1,5 @@
 import React from 'react'
+import Logo from '../icons/logo.png'
 
 const Home = () => {
   return (
@@ -12,7 +13,7 @@ const Home = () => {
         </aside>
         <aside>
           <div>
-            <img src="" alt="" />
+            <img className="w-[4rem] h-[4rem]" src={Logo} alt="" />
             <input
               type="text"
               placeholder="please enter what you want to search"
