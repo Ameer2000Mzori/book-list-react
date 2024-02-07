@@ -18,7 +18,7 @@
 
 # 📖 About This Project <a name="about-project"></a>
 
-> Real Estate Website is a website created with the MERN stack. With additional npm packages, you can create an account, delete an account, post a house for sale or rent, add favorites, remove favorites, and search for houses. Download the project for a demo test.
+> "Book-List-React" is a project created with React, utilizing Tailwind CSS. Additionally, it incorporates ESLint and Prettier for cleaner code. Don't forget to download the project and take a look!
 
 # Sample Of Website <a name="Sample-Of-Website"></a>
 
@@ -36,9 +36,6 @@
   <li><a href="https://tailwindcss.com/">Tailwindcss</a></li>
   <li><a href="https://en.wikipedia.org/wiki/JavaScript">Javascript</a></li>
   <li><a href="https://react.dev/">React</a></li>
-  <li><a href="https://nodejs.org/en">Nodejs</a></li>
-  <li><a href="https://expressjs.com/">Expressjs</a></li>
-  <li><a href="https://www.mongodb.com/">Mongodb</a></li>
  <li><a href="https://prettier.io/">Prettier</a></li>
   <li><a href="https://eslint.org/">Eslint</a></li>
   </ul>
@@ -53,11 +50,6 @@
 - **[TAILWIND ]**
 - **[JAVASCRIPT ]**
 - **[REACT ]**
-
-- **[BACKEND ]**
-- **[NODE.JS ]**
-- **[EXPRESS.JS ]**
-- **[MANGO.DB ]**
 
 - **[TOOLS ]**
 - **[ESLINT ]**
