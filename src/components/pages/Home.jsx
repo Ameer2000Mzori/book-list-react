@@ -1,6 +1,7 @@
 import React, { useState } from 'react' // changed
 import Logo from '../icons/logo.png' // changed
 import booksObject from './hooks/booksObject' // changed
+import SelectedBook from './SelectedBook'
 
 const Home = () => {
   const [books, setBooks] = useState(null)
@@ -58,14 +59,14 @@ const Home = () => {
             })}
           </aside>
           {/* here where a book is selected and shown in right side */}
-          {/* here is aside removed turn it book if not worked */}
+
+          <aside className="w-[70%] h-[100%] border-l-[1px] border-t-[1px] border-gray-400 relative overflow-hidden">
+            {books && ( // changed
+              <SelectedBook title={books && books.title} />
+            )}
+          </aside>
         </div>
       </main>
-      {books && ( // changed
-        <div>
-          <p>{books.title}</p>
-        </div>
-      )}
     </section>
   )
 }
