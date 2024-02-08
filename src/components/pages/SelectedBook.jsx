@@ -2,6 +2,20 @@ import React from 'react'
 import PropTypes from 'prop-types' // Make sure this line is added
 import Logo from '../icons/logo.png'
 
+export const favoList = [
+  {
+    title: 'test',
+  },
+]
+
+const saveFavo = (title) => {
+  console.log('saved', title)
+  favoList.push({
+    title,
+  })
+  console.log('this is our favolist afer :', favoList)
+}
+
 const SelectedBook = ({ title }) => {
   return (
     <div>
@@ -15,6 +29,7 @@ const SelectedBook = ({ title }) => {
           {title}
         </p>
         <button
+          onClick={() => saveFavo(title)}
           type="button"
           className="h-[40px] w-[160px] bg-slate-500 rounded-mg hover:bg-slate-200 active:bg-slate-600"
         >
