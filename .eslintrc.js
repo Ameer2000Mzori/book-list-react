@@ -16,5 +16,7 @@ module.exports = {
     'react/jsx-one-expression-per-line': 'off',
     'react/function-component-definition': 'off',
     'arrow-body-style': 'off', // Disable arrow-body-style rule
+    'jsx-a11y/click-events-have-key-events': 'off', // Disable click-events-have-key-events rule
+    'jsx-a11y/no-static-element-interactions': 'off', // Disable no-static-element-interactions rule
   },
 }
