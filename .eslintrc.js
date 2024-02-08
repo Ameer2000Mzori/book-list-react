@@ -10,6 +10,8 @@ module.exports = {
   },
   rules: {
     'linebreak-style': 'off',
+    'react/jsx-indent': 'off',
+    indent: 'off',
     semi: 'off',
     'react/jsx-filename-extension': ['error', { extensions: ['.js', '.jsx'] }],
     'import/newline-after-import': 'off',
@@ -18,5 +20,6 @@ module.exports = {
     'arrow-body-style': 'off', // Disable arrow-body-style rule
     'jsx-a11y/click-events-have-key-events': 'off', // Disable click-events-have-key-events rule
     'jsx-a11y/no-static-element-interactions': 'off', // Disable no-static-element-interactions rule
+    indent: ['error', 2, { ignoredNodes: ['JSXElement'], SwitchCase: 1 }],
   },
 }
