@@ -1,6 +1,6 @@
 import React, { useState } from 'react' // changed
 import Logo from '../icons/logo.png' // changed
-import booksObject from './hooks/booksObj' // changed
+import booksObject from './hooks/booksObject' // changed
 
 const Home = () => {
   const [books, setBooks] = useState(null)
@@ -58,6 +58,7 @@ const Home = () => {
             })}
           </aside>
           {/* here where a book is selected and shown in right side */}
+          {/* here is aside removed turn it book if not worked */}
         </div>
       </main>
       {books && ( // changed
