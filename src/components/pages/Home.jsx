@@ -2,14 +2,22 @@ import React, { useState } from 'react' // changed
 import Logo from '../icons/logo.png' // changed
 import booksObject from './hooks/booksObject' // changed
 import SelectedBook from './SelectedBook'
+import ListFavo from './ListFavo'
 
 const Home = () => {
   const [books, setBooks] = useState(null)
+  const [changeBook, setChangeBook] = useState(true)
 
   const selectedBook = (book) => {
     // fixed
     setBooks(book) // fixed
   } // fixed
+  // change book type
+  const booksTypeChange = () => {
+    // console.log('books type change')
+    // eslint-disable-next-line
+    changeBook ? setChangeBook(false) : setChangeBook(true)
+  }
 
   return (
     <section className="flex flex-col h-[100vh] w-[100vw] text-center justify-center items-center bg-slate-600">
@@ -30,6 +38,7 @@ const Home = () => {
               search
             </button>
             <button
+              onClick={booksTypeChange}
               type="button"
               className="w-[150px] h-[30px] rounded-sm bg-white active:bg-slate-500 hover:bg-slate-400 hover:text-white"
             >
@@ -41,8 +50,8 @@ const Home = () => {
           {/* here is the container of the books on the left side when clicked one of them */}
 
           <aside className="w-[30%] h-[100%] border-t-[1px] border-gray-400 flex flex-col text-ccenter items-center justify-start pt-4 gap-4 overflow-y-auto">
-            {booksObject.map((book) => {
-              return (
+            {changeBook ? (
+              booksObject.map((book) => (
                 <div
                   onClick={() => selectedBook(book)}
                   key={book.id}
@@ -55,8 +64,10 @@ const Home = () => {
                   />
                   <p>{book.title}</p>
                 </div>
-              )
-            })}
+              ))
+            ) : (
+              <ListFavo />
+            )}
           </aside>
           {/* here where a book is selected and shown in right side */}
 

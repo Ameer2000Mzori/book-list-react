@@ -4,6 +4,7 @@ import Logo from '../icons/logo.png'
 
 export const favoList = [
   {
+    id: 1,
     title: 'test',
   },
 ]
