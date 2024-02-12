@@ -9,20 +9,26 @@ export const favoList = [
   },
 ]
 
-const saveFavo = (title) => {
+const SelectedBook = ({ title }) => {
   const foundBook = favoList.some((book) => book.title === title)
-  if (foundBook) {
-    console.log('this book is already in your favourites')
-  } else {
-    console.log('saved', title)
-    favoList.push({
-      title,
-    })
+  const saveFavo = () => {
+    if (foundBook) {
+      console.log('this book is already in your favourites')
+    } else {
+      console.log('saved', title)
+      favoList.push({
+        title,
+      })
+      console.log('this is our favolist afer :', favoList)
+    }
+  }
+
+  const removeFavo = () => {
+    const index = favoList.findIndex((book) => book.title === title)
+    favoList.splice(index, 1)
     console.log('this is our favolist afer :', favoList)
   }
-}
 
-const SelectedBook = ({ title }) => {
   return (
     <div>
       <img
@@ -34,13 +40,23 @@ const SelectedBook = ({ title }) => {
         <p className="flex flex-col justify-evenly text-center item-center h-[40px] w-[160px] bg-slate-300 rounded-mg">
           {title}
         </p>
-        <button
-          onClick={() => saveFavo(title)}
-          type="button"
-          className="h-[40px] w-[160px] bg-slate-500 rounded-mg hover:bg-slate-200 active:bg-slate-600"
-        >
-          save as favorat
-        </button>
+        {foundBook ? (
+          <button
+            onClick={() => removeFavo(title)}
+            type="button"
+            className="h-[40px] w-[160px] bg-slate-500 rounded-mg hover:bg-slate-200 active:bg-slate-600"
+          >
+            save as favorat new
+          </button>
+        ) : (
+          <button
+            onClick={() => saveFavo(title)}
+            type="button"
+            className="h-[40px] w-[160px] bg-slate-500 rounded-mg hover:bg-slate-200 active:bg-slate-600"
+          >
+            save as favorat
+          </button>
+        )}
       </div>
     </div>
   )
