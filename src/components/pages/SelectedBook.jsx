@@ -10,11 +10,16 @@ export const favoList = [
 ]
 
 const saveFavo = (title) => {
-  console.log('saved', title)
-  favoList.push({
-    title,
-  })
-  console.log('this is our favolist afer :', favoList)
+  const foundBook = favoList.some((book) => book.title === title)
+  if (foundBook) {
+    console.log('this book is already in your favourites')
+  } else {
+    console.log('saved', title)
+    favoList.push({
+      title,
+    })
+    console.log('this is our favolist afer :', favoList)
+  }
 }
 
 const SelectedBook = ({ title }) => {
