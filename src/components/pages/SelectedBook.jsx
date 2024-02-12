@@ -46,7 +46,7 @@ const SelectedBook = ({ title }) => {
             type="button"
             className="h-[40px] w-[160px] bg-slate-500 rounded-mg hover:bg-slate-200 active:bg-slate-600"
           >
-            save as favorat new
+            remove this book
           </button>
         ) : (
           <button

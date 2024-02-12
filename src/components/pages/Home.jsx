@@ -22,17 +22,6 @@ const Home = () => {
         <div className="flex flex-row justify-evenly text-center items-center h-[10%] w-[100%] gap-4">
           <img className="w-[4rem] h-[4rem]" src={Logo} alt="" />
           <div className="gap-4 flex flex-row text-center items-center justify-center">
-            <input
-              type="text"
-              placeholder="please enter what you want to search"
-              className="w-[250px] h-[30px] border-2 border-slate-400 rounded-md text-[0.9rem]"
-            />
-            <button
-              type="button"
-              className="w-[150px] h-[30px] rounded-sm bg-white active:bg-slate-500 hover:bg-slate-400 hover:text-white"
-            >
-              search
-            </button>
             <button
               onClick={booksTypeChange}
               type="button"
