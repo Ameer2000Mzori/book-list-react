@@ -1,11 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Logo from '../icons/logo.png'
 import booksObject from './hooks/booksObject'
 import SelectedBook, { favoList } from './SelectedBook'
 
 const Home = () => {
+  const [booksList, setBooksList] = useState([])
   const [books, setBooks] = useState(null)
   const [changeBook, setChangeBook] = useState(true)
+
+  useEffect(() => {
+    setBooksList(booksObject)
+  }, [])
 
   const selectedBook = (book) => {
     setBooks(book)
@@ -34,7 +39,7 @@ const Home = () => {
         <div className="h-[90%] w-[100%] flex flex-row">
           <aside className="w-[30%] h-[100%] border-t-[1px] border-gray-400 flex flex-col text-center items-center justify-start pt-4 gap-4 overflow-y-auto">
             {changeBook
-              ? booksObject.map((book) => (
+              ? booksList.map((book) => (
                   <div
                     onClick={() => selectedBook(book)}
                     key={book.id}

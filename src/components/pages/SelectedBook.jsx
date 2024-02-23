@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types' // Make sure this line is added
 import Logo from '../icons/logo.png'
 
 const SelectedBook = ({ title }) => {
@@ -19,23 +18,19 @@ const SelectedBook = ({ title }) => {
             type="button"
             className="h-[40px] w-[160px] bg-slate-500 rounded-mg hover:bg-slate-200 active:bg-slate-600"
           >
-            remove this book
+            remove
           </button>
         ) : (
           <button
             type="button"
             className="h-[40px] w-[160px] bg-slate-500 rounded-mg hover:bg-slate-200 active:bg-slate-600"
           >
-            save as favorat
+            save as favo
           </button>
         )}
       </div>
     </div>
   )
-}
-
-SelectedBook.propTypes = {
-  title: PropTypes.string.isRequired,
 }
 
 export default SelectedBook
